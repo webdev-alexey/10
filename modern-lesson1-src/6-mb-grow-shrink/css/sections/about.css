@@ -1,0 +1,25 @@
+.aboutImage {
+  width: calc(100% / 12 * 5 - 30px);
+}
+
+.aboutInfo {
+  width: calc(100% / 12 * 7 - 30px);
+}
+
+@media screen and (max-width: 900px) {
+  .aboutImage,
+  .aboutInfo {
+    width: calc(100% / 12 * 6 - 30px);
+  }
+
+  .aboutInfo {
+    width: calc(100% / 12 * 6 - 30px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .aboutImage,
+  .aboutInfo {
+    width: calc(100% - 30px);
+  }
+}

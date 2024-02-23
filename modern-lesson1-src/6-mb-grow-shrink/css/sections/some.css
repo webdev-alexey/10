@@ -1,0 +1,29 @@
+.someRow {
+  display: flex;
+  gap: 30px;
+}
+
+/* flex: flex-grow flex-shrink flex-basis;
+	flex: 0 1 auto; */
+
+.someImage {
+  flex: 3 0 250px;
+}
+
+.someInfo {
+  flex: 2 1 500px;
+}
+
+@media screen and (max-width: 800px) {
+  .someRow {
+    flex-wrap: wrap;
+  }
+}
+
+/*
+	flex: 0 1 500px
+	flex: 0 0 500px
+	flex: 1 0 500px
+	flex: 1 1 500px
+
+*/

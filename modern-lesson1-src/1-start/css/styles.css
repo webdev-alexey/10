@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-profit {
+  background: #232324;
+  padding: 15px 0;
+}
+
+.profit-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.profit-item {
+  text-align: center;
+  margin: 15px;
+  width: 270px;
+}
+
+.profit-item__title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.profit-item__text {
+  color: #d94948;
+}
