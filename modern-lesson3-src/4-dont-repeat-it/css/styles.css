@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.section-catalog {
+  background: #232324;
+  padding: 15px 0;
+}
+
+.catalog-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.catalog-items::after {
+  content: "";
+  flex: 1 1 250px;
+}
+
+/* brain training */
+@media screen and (min-width: 888px) {
+  .catalog-items:has(.catalog-item:nth-child(3n + 1):last-child)::after {
+    flex: 2 1 530px;
+  }
+}
+
+.catalog-item {
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 1 1 250px;
+}
+
+.catalog-item__title {
+  color: #6cc372;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.catalog-item__price {
+  margin: 10px 0;
+}
+
+.catalog-item__button {
+  display: block;
+  text-decoration: none;
+  background: #6cc372;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}

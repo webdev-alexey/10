@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-cards {
+  padding: 15px 0;
+}
+
+.user-card {
+  border: 1px solid #f00;
+  padding: 15px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: minmax(180px, 25%) 1fr auto;
+  grid-template-areas:
+    "names names rating"
+    "pic slogan slogan"
+    "pic btn btn";
+}
+
+.user-card__names {
+  font-size: 30px;
+  grid-area: names;
+}
+
+.user-card__rating {
+  font-size: 26px;
+  text-align: right;
+  grid-area: rating;
+}
+
+.user-card__slogan {
+  font-style: italic;
+  grid-area: slogan;
+}
+
+.user-card__actions {
+  grid-area: btn;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: flex-end;
+  gap: 10px;
+}
+
+.user-card__pic {
+  grid-area: pic;
+}
+
+.user-card__pic img {
+  display: block;
+}
+
+.user-card__btn {
+  flex-grow: 1;
+  flex-basis: 205px;
+}
+
+.btn {
+  cursor: pointer;
+  text-align: center;
+  background: #f90;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 680px) {
+  .user-card {
+    grid-template-columns: minmax(120px, 25%) 1fr;
+    grid-template-areas:
+      "pic names"
+      "pic rating"
+      "slogan slogan"
+      "btn btn";
+  }
+
+  .user-card__names {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .user-card {
+    grid-template-columns: 108px 1fr;
+    grid-template-areas:
+      "names names"
+      "rating rating"
+      "slogan slogan"
+      "pic btn";
+  }
+
+  .user-card__names,
+  .user-card__rating {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .user-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "names"
+      "rating"
+      "slogan"
+      "btn";
+  }
+
+  .user-card__pic img {
+    width: 100%; /* shit image */
+  }
+}
