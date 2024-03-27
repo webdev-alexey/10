@@ -1,0 +1,27 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.gallery {
+  --bigH: 1068;
+  --bigW: 600;
+  --ratio: calc(var(--bigW) / var(--bigH));
+  --smallW: calc(100% / (2 * var(--ratio) + 2));
+  display: grid;
+  grid-template-columns: var(--smallW) 1fr var(--smallW);
+}
+
+.gallery__item--big {
+  grid-row: span 2;
+}
+
+.gallery__pic {
+  display: block;
+}
